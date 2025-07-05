@@ -953,6 +953,7 @@ class CloseTicketConfirmView(ui.View):
             await interaction.followup.send("Não tenho permissão para deletar este canal. Por favor, verifique minhas permissões.", ephemeral=True)
         except Exception as e:
             logging.error(f"Erro inesperado ao fechar o ticket {ticket_id} (Channel ID: {channel_id}): {e}", exc_info=True)
+            await asyncio.sleep(1) # Adiciona um atraso antes de enviar a mensagem de erro
             await interaction.followup.send(f"Ocorreu um erro inesperado ao fechar o ticket: {e}", ephemeral=True)
 
     @ui.button(label="Cancelar", style=discord.ButtonStyle.secondary, custom_id="cancel_close_ticket")
