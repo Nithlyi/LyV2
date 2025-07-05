@@ -852,15 +852,15 @@ class TicketPanelView(ui.View):
 
             close_view = CloseTicketView()
             await ticket_channel.send(f"{interaction.user.mention}", embed=ticket_embed, view=close_view)
-            await asyncio.sleep(0.5) # Adiciona um pequeno atraso antes do followup
+            await asyncio.sleep(1) # Aumenta o atraso antes do followup
             await interaction.followup.send(f"Seu ticket foi criado em {ticket_channel.mention}!", ephemeral=True)
 
         except discord.Forbidden:
             await interaction.followup.send("Não tenho permissão para criar canais nesta categoria. Por favor, verifique minhas permissões e as permissões da categoria.", ephemeral=True)
         except Exception as e:
             logging.error(f"Erro ao criar ticket: {e}", exc_info=True)
-            # Adiciona um pequeno atraso antes do followup de erro também
-            await asyncio.sleep(0.5)
+            # Aumenta o atraso antes do followup de erro também
+            await asyncio.sleep(1)
             await interaction.followup.send(f"Ocorreu um erro ao criar o ticket: {e}", ephemeral=True)
 
 # View para o botão de fechar ticket dentro do canal do ticket
@@ -886,7 +886,7 @@ class CloseTicketConfirmView(ui.View):
     @ui.button(label="Confirmar Fechamento", style=discord.ButtonStyle.danger, custom_id="confirm_close_ticket")
     async def confirm_close(self, interaction: discord.Interaction, button: ui.Button):
         await interaction.response.defer(ephemeral=True)
-        await asyncio.sleep(0.5) # Adiciona um pequeno atraso após o deferimento
+        await asyncio.sleep(1) # Aumenta o atraso após o deferimento antes do followup
 
         ticket_channel = interaction.channel
         channel_id = ticket_channel.id
