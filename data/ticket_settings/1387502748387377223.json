@@ -1,0 +1,17 @@
+{
+    "category_id": 1389786952873803846,
+    "panel_embed": {
+        "title": "Suporte & Atendimento",
+        "description": "Ol\u00e1, preciso de suporte? Clique no bot\u00e3o a baixo para criar um ticket",
+        "image_url": "https://images-ext-1.discordapp.net/external/WeLUm5V1PJyo9Z9gNoGZ2B6clCx2I2BJFu3qlYNMrck/https/i.pinimg.com/originals/64/a4/bb/64a4bb8cd0e2bbc28bf6ffa779083795.gif?width=300&height=169",
+        "footer_text": "Equipe de modera\u00e7\u00e3o",
+        "footer_icon_url": null,
+        "color": "#a5edff"
+    },
+    "initial_embed": {
+        "title": "Ticket Aberto",
+        "description": "Ol\u00e1 \u00fasuario, o atendimento pode demorar dependendo do hor\u00e1rio em que o ticket foi aberto, ent\u00e3o pedimos que seja paciente"
+    },
+    "panel_channel_id": 1389490618891239516,
+    "panel_message_id": 1391159052259692626
+}
