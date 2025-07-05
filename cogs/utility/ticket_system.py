@@ -889,6 +889,7 @@ class CloseTicketConfirmView(ui.View):
         await asyncio.sleep(1) # Aumenta o atraso após o deferimento antes do followup
 
         ticket_channel = interaction.channel
+        guild_id = interaction.guild_id # Adiciona a definição de guild_id
         channel_id = ticket_channel.id
 
         # Find the ticket in the JSON file by channel ID
